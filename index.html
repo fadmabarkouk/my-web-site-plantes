@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Plant Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #a8e063, #56ab2f);
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .plant-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .plant-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        .data p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Smart Plant Monitor</h1>
+        <p>Suivez la santé de vos plantes en temps réel.</p>
+        <div class="plant-card">
+            <img src="c:\Users\user\Documents\ma_plante.jpg" alt="Plante" class="plant-image">
+            <div class="data">
+                <p>🌡 Température: <span id="temperature">24.0</span> °C</p>
+                <p>💧 Humidité: <span id="humidite">76.6</span> %</p>
+                <p>🌿 Humidité du sol: <span id="humidite-sol">39.0</span> %</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateValues() {
+            document.getElementById('temperature').textContent = (20 + Math.random() * 10).toFixed(1);
+            document.getElementById('humidite').textContent = (50 + Math.random() * 50).toFixed(1);
+            document.getElementById('humidite-sol').textContent = (20 + Math.random() * 50).toFixed(1);
+        }
+        setInterval(updateValues, 3000);
+    </script>
+</body>
+</html>
